@@ -1,0 +1,47 @@
+[
+  {
+    "problemId": "P001",
+    "title": "Sum of Array",
+    "description": "Calculate the sum of all elements in an integer array.",
+    "difficulty": "Easy",
+    "tags": ["array", "loop"],
+    "points": 10,
+    "acceptance": "85%"
+  },
+  {
+    "problemId": "P002",
+    "title": "Reverse a String",
+    "description": "Given a string, return its reverse without using built-in reverse functions.",
+    "difficulty": "Medium",
+    "tags": ["string", "two-pointers"],
+    "points": 15,
+    "acceptance": "72%"
+  },
+  {
+    "problemId": "P003",
+    "title": "Two Sum",
+    "description": "Given an array of integers, return indices of the two numbers that add up to a specific target.",
+    "difficulty": "Easy",
+    "tags": ["array", "hashmap"],
+    "points": 12,
+    "acceptance": "78%"
+  },
+  {
+    "problemId": "P004",
+    "title": "Binary Tree Inorder Traversal",
+    "description": "Implement inorder traversal of a binary tree iteratively.",
+    "difficulty": "Medium",
+    "tags": ["tree", "stack"],
+    "points": 20,
+    "acceptance": "65%"
+  },
+  {
+    "problemId": "P005",
+    "title": "Merge K Sorted Lists",
+    "description": "Merge k sorted linked lists and return it as one sorted list.",
+    "difficulty": "Hard",
+    "tags": ["linked-list", "heap", "divide-conquer"],
+    "points": 30,
+    "acceptance": "45%"
+  }
+]
