@@ -6,14 +6,15 @@ const Problem = require('./models/Problem');
 const connectDB = require('./config/db');
 
 dotenv.config();
-connectDB();
 
 const importData = async () => {
     try {
+        await connectDB();
+
         const jsonPath = path.join(__dirname, '../frontend/src/pages/problemlist.json');
 
         if (!fs.existsSync(jsonPath)) {
-            console.error(`Error: File not found at ${jsonPath}`);
+            console.error(`❌ Error: File not found at ${jsonPath}`);
             process.exit(1);
         }
 
@@ -23,10 +24,10 @@ const importData = async () => {
         await Problem.deleteMany(); // Clear existing
         await Problem.insertMany(problems);
 
-        console.log('Data Imported!');
+        console.log('✅ Data Imported Successfully to Atlas!');
         process.exit();
     } catch (error) {
-        console.error(`${error}`);
+        console.error(`❌ Error: ${error}`);
         process.exit(1);
     }
 };

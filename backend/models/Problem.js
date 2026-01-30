@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 
-const problemSchema = mongoose.Schema({
-    problemId: { type: String, required: true, unique: true },
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    difficulty: { type: String, enum: ['Easy', 'Medium', 'Hard'], required: true },
-    tags: [{ type: String }],
-    points: { type: Number, default: 0 },
-    acceptance: { type: String, default: '0%' }
-}, {
-    timestamps: true
+const ProblemSchema = new mongoose.Schema({
+    problemId: String,
+    title: String,
+    description: String,
+    difficulty: String,
+    tags: [String],
+    points: Number,
+    acceptance: String
 });
 
-module.exports = mongoose.model('Problem', problemSchema);
+module.exports = mongoose.model('Problem', ProblemSchema);

@@ -1,13 +1,30 @@
 const mongoose = require('mongoose');
 
-const submissionSchema = mongoose.Schema({
-    problemId: { type: String, required: true },
-    code: { type: String, required: true },
-    language: { type: String, required: true },
-    status: { type: String, default: 'Pending' }, // "Accepted", "Wrong Answer", "Pending"
-    verdict: { type: String }, // Optional detailed message
-}, {
-    timestamps: true
+const SubmissionSchema = new mongoose.Schema({
+    problemId: {
+        type: String,
+        required: true
+    },
+    code: {
+        type: String,
+        required: true
+    },
+    language: {
+        type: String,
+        required: true
+    },
+    status: {
+        type: String,
+        default: 'Pending'
+    },
+    verdict: {
+        type: String,
+        default: ''
+    },
+    submittedAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-module.exports = mongoose.model('Submission', submissionSchema);
+module.exports = mongoose.model('Submission', SubmissionSchema);
